@@ -7,9 +7,14 @@ class EmpresaController {
             const result = await oracle.executeQuery(
                 `SELECT * from TUND_UNIDADE`
             );
-            mongo.execute('empresas', result.rows);
-            return res.json(result.rows);
-        } catch (error) {}
+            await mongo.execute('empresas', result.rows);
+            return res.json({ documents: mongo.insertedCount() });
+        } catch (error) {
+            console.log(error);
+            return res.status(400).json({
+                erros: error,
+            });
+        }
     }
 }
 
