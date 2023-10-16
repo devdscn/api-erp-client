@@ -1,0 +1,4 @@
+node_modules
+.env
+passos.txt
+env-db-SID.sh
