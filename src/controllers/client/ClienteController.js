@@ -1,9 +1,9 @@
-import Connection from '../../database/Connection';
+import oracle from '../../database/Connection';
 import mongo from '../../database/DbMongo';
 class ClienteController {
     async index(req, res) {
         try {
-            const result = await Connection.executeQuery(
+            const result = await oracle.executeQuery(
                 `SELECT * from VEDI_CLIENTE`
             );
 
