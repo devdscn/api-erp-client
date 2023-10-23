@@ -3,15 +3,13 @@ import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
 import routes from './src/routes/routes';
-import jobCliente from './src/jobs/JobCliente';
-import './src/jobs';
+import './src/services';
 
 class App {
     constructor() {
         this.app = express();
         this.middlewares();
         this.routes();
-        // jobCliente.run();
     }
 
     middlewares() {
