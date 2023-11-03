@@ -1,6 +1,4 @@
-import JobCliente from './JobCliente';
 import Tasks from './Tasks';
-
 
 const empresas = new Tasks('SELECT * from TUND_UNIDADE', 'empresas');
 const clientes = new Tasks('SELECT * from VEDI_CLIENTE', 'clientes');
