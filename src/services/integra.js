@@ -19,7 +19,6 @@ export default class Integra {
         });
 
         await mongo.execute('empresas', empresas);
-        
     }
 }
 
@@ -50,4 +49,6 @@ export default class Integra {
   TUND_NUMERO_FUNCIONARIOS: null,
   TUND_FORNECE_ABAST_AUTO: 'N',
   TUND_GERENTE: null,
-  TUND_CNPJ_CPF_CONTADOR: null*/
+  TUND_CNPJ_CPF_CONTADOR: null
+
+*/
